@@ -5,7 +5,7 @@ const morgan = require("morgan");
 
 //directs app to open on local or allows for heroku to listen to
 const app = express();
-const PORT = process.env.PORT || 8080;
+const PORT = process.env.PORT || 3000;
 
 //express routing
 app.use(express.urlencoded({ extended: true }));
