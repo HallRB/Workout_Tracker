@@ -1,32 +1,39 @@
-//npm installation requisites
+//Import Dependencies
 const express = require("express");
-const mongoose = require("mongoose");
 const logger = require("morgan");
+const mongoose = require("mongoose");
 
-//directs app to open on local or allows for heroku to listen to
-const app = express();
+//Port Variable
 const PORT = process.env.PORT || 3000;
 
-//express routing
+//Variable for express function
+const app = express();
+
+//Allow App to use morgan
+app.use(logger("dev"));
+
+//Middleware
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
+
 app.use(express.static("public"));
 
-app.use(logger('dev'));
-
-mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/workout", {
-  useNewUrlParser: true,
-  useUnifiedTopology: true,
-  useCreateIndex: true,
-  useFindAndModify: false,
-});
-
+//Application Code for MongoDB Connection
+mongoose.connect(
+    process.env.MONGODB_URI || 'mongodb://localhost/workout', {
+        useNewUrlParser: true,
+        useUnifiedTopology: true,
+        useCreateIndex: true,
+        useFindAndModify: false
+    }
+);
+// routes
 require("./routes/api")(app);
 require("./routes/html")(app);
 
+//Turn on Server
 app.listen(PORT, () => {
-    console.log("==> Listening on port %s. Visit http://localhost:%s in your browser", PORT, PORT)
+    console.log(`App running on port ${PORT}!`);
 });
-
 //for heroku test
 // Author: Richard B. Hall
