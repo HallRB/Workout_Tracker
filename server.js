@@ -12,18 +12,19 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 app.use(express.static("public"));
 
-app.use(logger());
+app.use(logger('dev'));
 
 mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/workout", {
   useNewUrlParser: true,
   useUnifiedTopology: true,
   useCreateIndex: true,
+  useFindAndModify: false,
 });
 
 require("./routes/api")(app);
 require("./routes/html")(app);
 
-app.listen(PORT, function () {
+app.listen(PORT, () => {
     console.log("==> Listening on port %s. Visit http://localhost:%s in your browser", PORT, PORT)
 });
 
