@@ -1,5 +1,5 @@
 {
-  "name": "Workout_Tracker",
+  "name": "mongoose_skeleton",
   "version": "1.0.0",
   "description": "",
   "main": "server.js",
@@ -9,20 +9,11 @@
     "watch": "nodemon server.js",
     "seed": "node seeders/seed.js"
   },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/HallRB/Workout_Tracker"
-  },
-  "author": "Richard B. Hall",
+  "author": "",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/HallRB/Workout_Tracker/issues"
-  },
-  "homepage": "https://github.com/HallRB/Workout_Tracker#readme",
   "dependencies": {
     "express": "^4.17.1",
     "mongoose": "^5.10.15",
-    "morgan": "^1.10.0",
-    "path": "^0.12.7"
+    "morgan": "^1.10.0"
   }
 }
