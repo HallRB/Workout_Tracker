@@ -12,7 +12,7 @@
 #### HTML: Front End Language which displays the app
 #### CSS (Cascading Style Sheets): Stylized the page's UI
 #### Javascript: Provides functionality to the app
-#### Create React App: used to create the file structure for this app
+#### MySql: Stores information the user has inputted
 #### Axios: Used to pull outside resources into the app
 #### Heroku: Hosts the deployed page: https://workout-tracker-17-nosql.herokuapp.com/
 
