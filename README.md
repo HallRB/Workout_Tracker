@@ -1,14 +1,12 @@
 # Workout_Tracker
 
-# React Portfolio
-
-##UNDER MAINTENANCE
+# UNDER MAINTENANCE
 
 ## What is it?
 #### This app tracks the user's exercises over time separated into two categories: Cardo and Resistance. Enter your workout then view your work outs in a over time in the tracker
 
 ##  What does it look like?
-#### <img src= "/reactss.JPG" width="800">
+#### <img src= "/FitTra.JPG" width="800">
 
 ## What technologies were used?
 #### HTML: Front End Language which displays the app
